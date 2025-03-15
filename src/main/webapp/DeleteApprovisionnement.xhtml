@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ajouter un produit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" type="text/css" href="fonts/linearicons/style.css" />
+		<link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+	    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet" />
+	    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet" />
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style>
+	.return-button {
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		width: 35px;
+		height:35px ;
+		font-size: xx-large;
+	}
+
+	/* Ajoutez d'autres styles CSS au besoin */
+</style>
+	</head>
+
+<body>
+
+<div class="wrapper">
+		 
+		<a class="return-button" href="Article.jsp"><span class="lnr lnr-arrow-left"></span></a>
+			<div class="inner">
+			
+				<img src="images/image-1.png" alt="" class="image-1" />
+				<h:form id="deleteStudentById">
+					<h3> Delete</h3>
+					<div class="form-holder">
+						<span class=""><i class="fas fa-key"></i></span>
+						<h:inputText styleClass="form-control" placeholder="id" value="#{modifier_apro.id}" />
+					</div>
+					
+					
+					
+					<h:commandButton value="Delete" action="#{modifier_apro.delete}" styleClass="button" />
+					        <h:outputText id="deleteResult" rendered="#{not empty deletedStudentId}" value="!! Student Record Deleted From Database !!" styleClass="successText" />
+					
+				</h:form>
+				<img src="images/image-2.png" alt="" class="image-2" />
+			</div>
+		</div>
+
+</body>
+</html>

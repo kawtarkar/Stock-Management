@@ -1,0 +1,101 @@
+
+  
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ajouter un produit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" type="text/css" href="fonts/linearicons/style.css" />
+		<link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+	    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet" />
+	    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet" />
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style>
+	.return-button {
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		width: 35px;
+		height:35px ;
+		font-size: xx-large;}
+	.show{
+	
+    border: none;
+    width: 23%;
+    height: 33px;
+    cursor: pointer;
+    display: flex;
+    align-items: revert;
+    justify-content: center;
+    padding: 0;
+    background: #99ccff;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Muli-SemiBold";
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+
+}
+	}
+
+	/* Ajoutez d'autres styles CSS au besoin */
+</style>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+		 
+		<a class="return-button" href="Article.jsp"><span class="lnr lnr-arrow-left"></span></a>
+			<div class="inner">
+			
+				<img src="images/image-1.png" alt="" class="image-1" />
+				<h:form>
+					<h3>update Product?</h3>
+					<div class="form-holder">
+						<span class=""><i class="fas fa-key"></i></span>
+						<h:inputText styleClass="form-control" placeholder="name" value="#modifier_apro.id}" />
+					</div>
+					<div class="form-group">
+        					<div class="col-xs-offset-2 col-xs-10">
+            					<h:commandButton value="Show" action="#{modifier_apro.getStudentDetailsById}" styleClass="show" />
+            				</div>
+					</div>
+
+
+					<div class="form-holder">
+						<span class=""><i class="fas fa-calendar-alt"></i></span>
+						<h:inputText styleClass="form-control" placeholder="name" value="#{modifier_apro.datePrevueLivraison}" />
+					</div>
+					
+				
+
+
+					<div class="form-holder">
+						<span class=""><i class="fas fa-cubes"></i></span>
+						<h:inputText styleClass="form-control" placeholder="Quantity" value="#{modifier_apro.qteCommandé}" />
+					</div>
+
+					
+					
+					
+					<h:commandButton value="Register" action="#{modifier_apro.update}" styleClass="button" />
+					  <h:outputText id="updateResult" rendered="#{not empty updatedStudentRecord}" value="!! Student Record Updated In Database !!" styleClass="successText" />
+				</h:form>
+				<img src="images/image-2.png" alt="" class="image-2" />
+			</div>
+		</div>
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+  
